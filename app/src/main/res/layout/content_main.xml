@@ -10,10 +10,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.viljar.filmlistandroidproject.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/app_bar_main">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/search_for_movie"
+        android:id="@+id/textViewMainActivity"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextMainActivity"
+        android:hint="@string/title"
+        android:singleLine="true"
+        android:layout_below="@+id/textViewMainActivity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addMovie"
+        android:text="@string/add_movie"
+        android:id="@+id/buttonMainActivity"
+        android:layout_below="@+id/editTextMainActivity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
