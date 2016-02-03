@@ -22,7 +22,9 @@ public class TestDatabaseActivity extends ListActivity {
     public void loadListViewFromDB(){
         mydb = new Database(this);
         List<MovieItem> ibs = mydb.getAllMovies();
-        ArrayAdapter<MovieItem> adapter = new ArrayAdapter<MovieItem>(this,
+
+        //TODO create custom Adapter. Seems easy enough
+        ArrayAdapter<MovieItem> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, ibs);
         setListAdapter(adapter);
     }
